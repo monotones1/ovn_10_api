@@ -60,11 +60,8 @@ const getCard = () => {
             resultData.cards.forEach(post => {
                 let img = post.image; 
                 let imageCard = document.createElement('IMG');
-                imageCard.setAttribute('id', 'img');
-                let outputText = `<img src='${img}'>`;
-                imageCard.innerHTML = outputText;
+                imageCard.setAttribute('src', img);
                 cardOutput.appendChild(imageCard);
-                //cardOutput.innerHTML = outputText; 
             })
 
         })
