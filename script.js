@@ -58,9 +58,13 @@ const getCard = () => {
 
             //jsonOutput.innerHTML += resultData.result[0].properties.name; 
             resultData.cards.forEach(post => {
-                let v1 = post.image; 
-                let outputText = `<img src='${v1}'>`;
-                cardOutput.innerHTML = outputText; 
+                let img = post.image; 
+                let imageCard = document.createElement('IMG');
+                imageCard.setAttribute('id', 'img');
+                let outputText = `<img src='${img}'>`;
+                imageCard.innerHTML = outputText;
+                cardOutput.appendChild(imageCard);
+                //cardOutput.innerHTML = outputText; 
             })
 
         })
